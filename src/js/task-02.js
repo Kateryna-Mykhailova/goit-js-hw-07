@@ -11,7 +11,7 @@ const ingredients = [
 // Напиши скрипт, который для каждого элемента массива `ingredients` создаст
 // отдельный `li`, после чего вставит все `li` за одну операцию в список
 // `ul.ingredients`. Для создания DOM-узлов используй `document.createElement()`.
-const get = (array) => {
+const createNewElement = (array) => {
 array.forEach((element) => {
 
 const newElement = document.createElement('li');
@@ -21,5 +21,6 @@ const parentEl = document.querySelector('ul#ingredients')
 parentEl.appendChild(newElement);
 });
 }
-get(ingredients);
+
+createNewElement(ingredients);
 
