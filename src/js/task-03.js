@@ -65,4 +65,4 @@ const createGallery =  images.map(element => {
   parentEl.insertAdjacentHTML('beforeend', createGallery.join(''))
 
 
-  console.log(createGallery.join(''));
+  //console.log(createGallery.join(''));
