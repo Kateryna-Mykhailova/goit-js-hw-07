@@ -48,13 +48,12 @@ const createGallery = (array) => {
   array.forEach(element => {
   
   const parentEl = document.querySelector('#gallery');
-  parentEl.insertAdjacentHTML('beforeend', `<li><img src='${element.url}' alt ='${element.alt}' > </li>`)
+  parentEl.classList = "images-list"
+  parentEl.insertAdjacentHTML('beforeend', `<li class = "images-list_item"><img width = "320px" heigt = "180px"src='${element.url}' alt ='${element.alt}' > </li>`)
 
-  }) 
+  })  
   
-  const newListElement = document.querySelector('li');
-newListElement.classList = 'images';
-
 };
 createGallery(images);
 
+//
