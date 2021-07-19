@@ -58,17 +58,11 @@ const images = [
 const parentEl = document.querySelector('#gallery');
 parentEl.classList = "images-list"
 
-const elements = images.map(element => {
+const createGallery =  images.map(element => {
+  return `<li class = "images-list_item"><img width = "320px" heigt = "180px"src='${element.url}' alt ='${element.alt}' > </li>`
+  })
 
-  return parentEl.insertAdjacentHTML('beforeend', `<li class = "images-list_item"><img width = "320px" heigt = "180px"src='${element.url}' alt ='${element.alt}' > </li>`)
-});
+  parentEl.insertAdjacentHTML('beforeend', createGallery.join(''))
 
-parentEl.append(...elements)
 
-const makeGallery = ({url, alt}) => {
-
-}
-
-const elements = images.map(makeGallery)
-
-parentEl.append(...elements)
+  console.log(createGallery.join(''));
