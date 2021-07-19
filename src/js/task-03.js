@@ -43,17 +43,32 @@ const images = [
 
 //-----2-------
 
+// const parentEl = document.querySelector('#gallery');
+// parentEl.classList = "images-list"
 
-const createGallery = (array) => {
-  array.forEach(element => {
-  
-  const parentEl = document.querySelector('#gallery');
-  parentEl.classList = "images-list"
-  parentEl.insertAdjacentHTML('beforeend', `<li class = "images-list_item"><img width = "320px" heigt = "180px"src='${element.url}' alt ='${element.alt}' > </li>`)
+// const createGallery = (array) => {
+//   array.forEach(element => {
+//   parentEl.insertAdjacentHTML('beforeend', `<li class = "images-list_item"><img width = "320px" heigt = "180px"src='${element.url}' alt ='${element.alt}' > </li>`)
+//   })  
 
-  })  
-  
-};
-createGallery(images);
+// };
+// createGallery(images);
 
-//
+//------3--------
+const parentEl = document.querySelector('#gallery');
+parentEl.classList = "images-list"
+
+const elements = images.map(element => {
+
+  return parentEl.insertAdjacentHTML('beforeend', `<li class = "images-list_item"><img width = "320px" heigt = "180px"src='${element.url}' alt ='${element.alt}' > </li>`)
+});
+
+parentEl.append(...elements)
+
+const makeGallery = ({url, alt}) => {
+
+}
+
+const elements = images.map(makeGallery)
+
+parentEl.append(...elements)
