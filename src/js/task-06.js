@@ -9,23 +9,17 @@
 // Для добавления стилей, используй CSS-классы `valid` и `invalid`.
 
 const inputEl  = document.querySelector('#validation-input')
-// console.log(inputEl);
-
 const inputValue = inputEl.getAttribute('data-length')
-// console.log(inputValue);
-
 
 
 
 inputEl.addEventListener('blur', onInputBlur)
 
 function onInputBlur (event){
-    const inputChangeValue = event.currentTarget.value
-// console.log(inputChangeValue);
+const inputChangeValue = event.currentTarget.value
 const inputChangeValueLength = inputChangeValue.length
-// console.log(inputChangeValueLength);
 
- 
+
 if(Number(inputValue) === inputChangeValueLength){
     inputEl.classList.add('valid');
     inputEl.classList.remove('invalid');
