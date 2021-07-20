@@ -9,18 +9,6 @@
 
 
 
-// let counterValue = 0;
-// console.log(counterValue);
-// const button = document.querySelector('#counter button'),
-// const btnIncrement = button[0];
-
-// console.log(refs.counter);
-// console.log(refs.button);
-// console.log(btnIncrement);
-
-
-//const counterValue = refs.counter.textContent;
-
 const counterValue ={
     value: 0,
     increment(){
@@ -31,25 +19,19 @@ const counterValue ={
     },
 };
 const refs =  {
-    textValue: document.querySelector('#value'),
-btnDecrement: document.querySelector('.btnDecrement'),
-//btnDecrement: document.querySelector('div#counter.firstChild'),
-// btnDecrement: document.querySelector('#counter button'),
-btnIncrement: document.querySelector('.btnIncrement')
+textValue: document.querySelector('#value'),
+btnIncrement: document.querySelector('[data-action="increment"]'),
+btnDecrement: document.querySelector('[data-action="decrement"]'),
+
 }
 
 // const counter = document.querySelector('#counter button.')
-// console.log(counter);
-// const dfg = counter.querySelector('counter.firstChild')
-// console.log(dfg);
 
-// console.log(refs.btnDecrement);
-// console.log(refs.btnDecrement[1]);
+
 refs.btnDecrement.addEventListener('click', onBtnDecrementClick)
 refs.btnIncrement.addEventListener('click', onBtnIncrementClick)
 
 function onBtnDecrementClick (event){
-    
     counterValue.decrement()
     refs.textValue.textContent = counterValue.value
 }
