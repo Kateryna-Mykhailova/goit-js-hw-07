@@ -26,7 +26,7 @@ const ingredients = [
 
 //----2----
 const parentEl = document.querySelector('#ingredients');
-console.log(parentEl);
+
 
 const createElement = ingredients.map(el => {
   const newEl = document.createElement('li')

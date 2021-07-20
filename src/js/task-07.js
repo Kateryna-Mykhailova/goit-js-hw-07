@@ -17,5 +17,5 @@ function onInputChange(event){
     const inputValue = event.currentTarget.value
     // console.log(inputValue);
     textEl.style.fontSize = inputValue + 'px';
-
+    //textEl.style.fontSize = `${inputValue}px`;
 }
